@@ -1,0 +1,39 @@
+{
+  "app": {
+    "title": "商户后台",
+    "langs": {
+      "zh": "中文简体",
+      "en": "English",
+      "vi": "Tiếng Vi"
+    }
+  },
+  "menu": {
+    "dashboard": "控制台"
+  },
+  "user": {
+    "logout": "注销登录",
+    "setting": "账号设置"
+  },
+  "notify": {
+    "title": "系统通知",
+    "read": "全部已读",
+    "all": "查看全部"
+  },
+  "login": {
+    "pageTitle": "商户登录",
+    "button": "登录",
+    "loginWith": "使用其他登录",
+    "username": {
+      "label": "账号",
+      "placeholder": "请输入账号"
+    },
+    "password": {
+      "label": "密码",
+      "placeholder": "请输入密码"
+    },
+    "authcode": {
+      "label": "验证码",
+      "placeholder": "请输入验证码"
+    }
+  }
+}
