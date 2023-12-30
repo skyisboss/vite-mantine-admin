@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import AutoImport from 'unplugin-auto-import/vite'
 import path from 'path'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,6 +13,14 @@ export default defineConfig({
     extensions: ['.jsx', '.js', '.ts', '.tsx'],
   },
   plugins: [
+    react(),
+    createSvgIconsPlugin({
+      // Specify the icon folder to be cached
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+      // Specify symbolId format
+      symbolId: 'icon-[name]',
+      inject: 'body-first',
+    }),
     AutoImport({
       imports: [
         'react',
@@ -46,6 +55,7 @@ export default defineConfig({
           ],
           '@emotion/styled': [['default', 'styled']],
           '@mantine/form': ['useForm'],
+          '@mantine/hooks': ['useDisclosure'],
           '@mantine/core': [
             'rem',
             'Button',
@@ -58,13 +68,17 @@ export default defineConfig({
             'MenuItem',
             'NavLink',
             'Divider',
+            'Table',
+            'Pagination',
+            'Grid',
+            'Stack',
+            'Card',
           ],
         },
       ],
       dts: './src/@types/auto-imports.d.ts',
       dirs: ['src/store', 'src/routers', 'src/hooks', 'src/i18n', 'src/api', 'src/utils'],
     }),
-    react(),
   ],
   esbuild: {
     // drop: ['console', 'debugger'],

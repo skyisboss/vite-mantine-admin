@@ -61,7 +61,7 @@ const LoginView = memo((props: Props) => {
                   size="md"
                   type="submit"
                   variant="gradient"
-                  gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+                  gradient={{ from: '#295fff', to: '#2BD0FE', deg: 40 }}
                   //   rightSection={<MdArrowRightAlt />}
                 >
                   {i18n.t('login.button')}

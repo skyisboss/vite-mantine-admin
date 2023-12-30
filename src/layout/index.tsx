@@ -24,7 +24,7 @@ const LayoutBaseView = memo((props: Props) => {
     <AppShell
       header={{ height: 52 }}
       navbar={{
-        width: layout.collapsed ? 60 : 220,
+        width: layout.collapsed ? 60 : 200,
         breakpoint: 'sm',
         collapsed: { mobile: !layout.collapsed },
       }}
@@ -36,8 +36,11 @@ const LayoutBaseView = memo((props: Props) => {
       <AppShell.Navbar p="md" className="!px-0">
         <Sidebar />
       </AppShell.Navbar>
-      <AppShell.Main bg="#fbfdfe">
-        <Outlet />
+      {/* 原来配色：#fbfdfe */}
+      <AppShell.Main bg="#eceef1">
+        <div className="p-0 md:p-4">
+          <Outlet />
+        </div>
       </AppShell.Main>
     </AppShell>
   )

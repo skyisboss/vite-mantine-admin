@@ -5,10 +5,49 @@
       "zh": "中文简体",
       "en": "English",
       "vi": "Tiếng Vi"
+    },
+    "button": {
+      "add": "新增",
+      "save": "保存",
+      "cancel": "取消",
+      "confirm": "确认"
+    },
+    "langVersion": {
+      "title": "多语言管理",
+      "zhField": "中文(默认)",
+      "enField": "英语",
+      "viField": "越南语"
+    },
+    "upload": {
+      "addFile": "添加文件",
+      "addImage": "添加图片",
+      "addVideo": "添加视频",
+      "limitTip": "最大上传 5mb"
     }
   },
   "menu": {
-    "dashboard": "控制台"
+    "help": "使用帮助",
+    "admin": "后台管理",
+    "home": "首页",
+    "product": "产品",
+    "order": "订单",
+    "category": "分类",
+    "content": "贴文",
+    "analyse": "分析",
+    "marketing": "活动",
+    "marketingAdd": "创建活动",
+    "platform": "销售渠道",
+    "telegram": "Telegram",
+    "whatsapp": "Whatsapp",
+    "store": "实体店",
+    "setting": "设置"
+  },
+  "system": {
+    "base": "基本设置",
+    "store": "店铺设置",
+    "staff": "员工管理",
+    "payment": "付款方式",
+    "logs": "操作记录"
   },
   "user": {
     "logout": "注销登录",
@@ -22,7 +61,7 @@
   "login": {
     "pageTitle": "商户登录",
     "button": "登录",
-    "loginWith": "使用其他登录",
+    "loginWith": "使用其他方式",
     "username": {
       "label": "账号",
       "placeholder": "请输入账号"
@@ -35,5 +74,12 @@
       "label": "验证码",
       "placeholder": "请输入验证码"
     }
+  },
+  "page": {
+    "add": "新增",
+    "search": "搜索",
+    "orderBy": "排序",
+    "filter": "筛选",
+    "selected": "已选择 {count} 项"
   }
 }

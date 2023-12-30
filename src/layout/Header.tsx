@@ -35,7 +35,9 @@ const HeaderView = memo((props: Props) => {
       />
       <div className="flex flex-1 justify-between h-full">
         <div className="flex items-center">
-          <div className="hidden md:block w-[203px]">{i18n.t('app.title')}</div>
+          <div className="hidden md:block w-[203px]" style={layout.collapsed ? { width: '43px' } : {}}>
+            {i18n.t('app.title')}
+          </div>
         </div>
         <div className="w-full h-full flex justify-between items-center">
           <NavItem className="flex items-center" onClick={setCollapsed}>
@@ -85,9 +87,16 @@ const HeaderView = memo((props: Props) => {
                     </Text>
                   </div>
                 </Menu.Item>
-
                 <Menu.Divider />
 
+                <Menu.Item leftSection={<IconSettings style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}>
+                  {i18n.t('user.help')}
+                </Menu.Item>
+
+                <Menu.Divider />
+                <Menu.Item leftSection={<IconSettings style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}>
+                  {i18n.t('user.bill')}
+                </Menu.Item>
                 <Menu.Item leftSection={<IconSettings style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}>
                   {i18n.t('user.setting')}
                 </Menu.Item>

@@ -12,6 +12,7 @@ const SelectLangView = memo((props: Props) => {
 
   const handleClick = (key: string) => {
     setLang(key)
+    location.reload()
   }
   const langRows = [
     { key: 'zh', label: 'app.langs.zh' },
