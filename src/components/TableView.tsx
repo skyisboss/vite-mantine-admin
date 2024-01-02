@@ -1,4 +1,4 @@
-import { TitleByMenu } from '@/layout/Sidebar'
+import { PageNav } from '@/layout/menu'
 import PageHeader from './PageHeader'
 import TableHeader from './TableHeader'
 import TableContent from './TableContent'
@@ -22,7 +22,7 @@ const TableViewView = memo((props: Props) => {
 
   return (
     <div className={className}>
-      <PageHeader title={TitleByMenu('marketing')} action onClick={handleAdd} />
+      <PageHeader title={PageNav?.marketing?.label} action onClick={handleAdd} />
 
       {data.length > 0 ? (
         <Card shadow="md" radius="md">

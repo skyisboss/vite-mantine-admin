@@ -1,6 +1,6 @@
 import PageHeader from '@/components/PageHeader'
-import { TitleByMenu } from '@/layout/Sidebar'
-import { BackgroundImage, Paper, PaperProps } from '@mantine/core'
+import { PageNav } from '@/layout/menu'
+import { Paper } from '@mantine/core'
 import BrImg from '@/assets/images/chat-br.png'
 import BgImg from '@/assets/images/chat-bg.png'
 import { IconChevronLeft } from '@tabler/icons-react'
@@ -12,7 +12,7 @@ const SendContentView = memo((props: Props) => {
   return (
     <div className={className}>
       <div className="md:px-24">
-        <PageHeader title={TitleByMenu(location.pathname)} goback={() => history.back()} />
+        <PageHeader title={PageNav?.asda?.label} goback={() => history.back()} />
 
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 md:col-span-4">

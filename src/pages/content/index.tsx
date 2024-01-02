@@ -1,7 +1,7 @@
 import PageHeader from '@/components/PageHeader'
 import TableContent from '@/components/TableContent'
 import TableHeader from '@/components/TableHeader'
-import { TitleByMenu } from '@/layout/Sidebar'
+import { PageNav } from '@/layout/menu'
 import { IconSend } from '@tabler/icons-react'
 import { NavLink } from 'react-router-dom'
 
@@ -30,7 +30,7 @@ const ContentView = memo((props: Props) => {
   return (
     <div className={className}>
       <PageHeader
-        title={TitleByMenu(location.pathname)}
+        title={PageNav?.content?.label}
         action={
           <NavLink to="/content/send">
             <Button

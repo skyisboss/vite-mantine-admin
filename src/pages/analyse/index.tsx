@@ -1,5 +1,5 @@
 import PageHeader from '@/components/PageHeader'
-import { TitleByMenu } from '@/layout/Sidebar'
+import { PageNav } from '@/layout/menu'
 import { SegmentedControl } from '@mantine/core'
 import { DatePicker } from 'antd'
 
@@ -24,7 +24,7 @@ const AnalyseView = memo((props: Props) => {
   }
   return (
     <div className={className}>
-      <PageHeader title={TitleByMenu(location.pathname)} />
+      <PageHeader title={PageNav?.analyse?.label} />
       <div className="flex mb-4 flex-col md:flex-row">
         <SegmentedControl bg="var(--mantine-color-gray-3)" data={dateList} defaultValue={ctrl} onChange={onChange} />
         {ctrl === '5' && <RangePicker className="md:ml-4" />}

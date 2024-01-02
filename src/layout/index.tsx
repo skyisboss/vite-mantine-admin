@@ -3,10 +3,9 @@ import { useMatches, Outlet } from 'react-router-dom'
 import Header from './Header'
 import Sidebar from './Sidebar'
 
-interface Props extends WithClassName {}
+interface Props {}
 
 const LayoutBaseView = memo((props: Props) => {
-  const { className } = props
   const matches = useMatches()
   const { layout } = useStore()
   useEffect(() => {

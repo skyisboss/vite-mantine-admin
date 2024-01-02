@@ -59,7 +59,7 @@ const PageHeaderView = memo((props: Props) => {
             gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
             onClick={onClick}
           >
-            {typeof action === 'string' ? action : i18n.t('page.add')}
+            {typeof action === 'string' ? action : i18n.t('common.add')}
           </Button>
         ) : (
           action

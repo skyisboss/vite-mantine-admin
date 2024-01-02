@@ -70,7 +70,32 @@ export const routes: RouteObject[] = [
       {
         path: '/product',
         handle: { title: 'menu.product' },
-        element: lazy(() => import('@/pages/product')),
+        children: [
+          {
+            path: '',
+            index: true,
+            handle: { title: 'menu.product' },
+            element: lazy(() => import('@/pages/product')),
+          },
+          {
+            path: 'category',
+            index: true,
+            handle: { title: 'menu.category' },
+            element: lazy(() => import('@/pages/product/ProductCategory')),
+          },
+          {
+            path: 'add',
+            index: true,
+            handle: { title: 'common.add' },
+            element: lazy(() => import('@/pages/product/ProductEdit')),
+          },
+          {
+            path: 'edit',
+            index: true,
+            handle: { title: 'common.edit' },
+            element: lazy(() => import('@/pages/product/ProductEdit')),
+          },
+        ],
       },
       {
         path: '/setting',

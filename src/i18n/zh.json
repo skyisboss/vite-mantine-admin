@@ -10,7 +10,8 @@
       "add": "新增",
       "save": "保存",
       "cancel": "取消",
-      "confirm": "确认"
+      "confirm": "确认",
+      "exit": "退出"
     },
     "langVersion": {
       "title": "多语言管理",
@@ -29,7 +30,8 @@
     "help": "使用帮助",
     "admin": "后台管理",
     "home": "首页",
-    "product": "产品",
+    "product": "商品",
+    "stock": "库存",
     "order": "订单",
     "category": "分类",
     "content": "贴文",
@@ -40,7 +42,7 @@
     "telegram": "Telegram",
     "whatsapp": "Whatsapp",
     "store": "实体店",
-    "setting": "设置"
+    "setting": "系统设置"
   },
   "system": {
     "base": "基本设置",
@@ -51,6 +53,7 @@
   },
   "user": {
     "logout": "注销登录",
+    "logoutConfirmTitle": "确认注销登录吗？",
     "setting": "账号设置"
   },
   "notify": {
@@ -75,8 +78,9 @@
       "placeholder": "请输入验证码"
     }
   },
-  "page": {
+  "common": {
     "add": "新增",
+    "edit": "编辑",
     "search": "搜索",
     "orderBy": "排序",
     "filter": "筛选",

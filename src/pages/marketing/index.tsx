@@ -1,7 +1,7 @@
 import PageHeader from '@/components/PageHeader'
 import TableContent from '@/components/TableContent'
 import TableHeader from '@/components/TableHeader'
-import { TitleByMenu } from '@/layout/Sidebar'
+import { PageNav } from '@/layout/menu'
 
 interface Props extends WithClassName {}
 
@@ -27,7 +27,7 @@ const MarketingView = memo((props: Props) => {
 
   return (
     <div className={className}>
-      <PageHeader title={TitleByMenu(location.pathname)} action onClick={handleAdd} />
+      <PageHeader title={PageNav?.marketing?.label} action onClick={handleAdd} />
 
       <Card shadow="md" radius="md">
         <Card.Section withBorder inheritPadding py="xs">

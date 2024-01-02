@@ -3,7 +3,7 @@ import StatsGrid from '@/components/StatsGrid'
 import { SimpleGrid } from '@mantine/core'
 import { IconUserPlus, IconDiscount2 } from '@tabler/icons-react'
 import SalesCount from './components/SalesCount'
-import { MenuData } from '@/layout/Sidebar'
+import { PageNav } from '@/layout/menu'
 
 interface Props extends WithClassName {}
 
@@ -11,9 +11,9 @@ const HomeView = memo((props: Props) => {
   const { className } = props
   return (
     <div className={className}>
-      <PageHeader title={MenuData.find(x => x.key === 'home')?.label ?? ''} />
+      <PageHeader title={PageNav?.home?.label} />
       <SimpleGrid cols={{ base: 1, xs: 2, md: 4 }}>
-        {[1, 2, 3, 4].map(x => (
+        {[1, 2, 3, 4].map((x) => (
           <StatsGrid
             key={x}
             title="交易金额"

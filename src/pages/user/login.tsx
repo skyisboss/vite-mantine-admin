@@ -1,4 +1,4 @@
-import SelectLang from '@/components/SelectLang'
+import PickerLang from '@/components/PickerLang'
 import { Card, Title } from '@mantine/core'
 import Bg from '@/assets/bg.png'
 import { FcGoogle } from 'react-icons/fc'
@@ -17,9 +17,9 @@ const LoginView = memo((props: Props) => {
     },
 
     validate: {
-      username: value => (/^\S+$/.test(value) ? null : i18n.t('login.username.placeholder')),
-      password: value => (/^\S+$/.test(value) ? null : i18n.t('login.password.placeholder')),
-      authcode: value => (/^\d+$/.test(value) ? null : i18n.t('login.authcode.placeholder')),
+      username: (value) => (/^\S+$/.test(value) ? null : i18n.t('login.username.placeholder')),
+      password: (value) => (/^\S+$/.test(value) ? null : i18n.t('login.password.placeholder')),
+      authcode: (value) => (/^\d+$/.test(value) ? null : i18n.t('login.authcode.placeholder')),
     },
   })
 
@@ -34,7 +34,7 @@ const LoginView = memo((props: Props) => {
           <Card padding="xl" className="p-10">
             <div className="mb-8 flex justify-between items-center">
               <Title order={3}>{i18n.t('login.pageTitle')}</Title>
-              <SelectLang />
+              <PickerLang />
             </div>
             <form className="space-y-6" onSubmit={form.onSubmit(handleSubmit)}>
               <TextInput

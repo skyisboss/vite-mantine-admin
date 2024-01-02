@@ -1,4 +1,5 @@
 import { AiOutlineTranslation } from 'react-icons/ai'
+import { IconWorld } from '@tabler/icons-react'
 import { Button, Menu } from '@mantine/core'
 
 interface Props extends WithClassName {
@@ -25,14 +26,14 @@ const SelectLangView = memo((props: Props) => {
         {child ? (
           child
         ) : (
-          <Button leftSection={<AiOutlineTranslation size={14} />} variant="default" className="border-none">
+          <Button leftSection={<IconWorld size={14} />} variant="default" className="border-none">
             <span className="font-medium">{i18n.t(`app.langs.${lang}`)}</span>
           </Button>
         )}
       </Menu.Target>
 
       <Menu.Dropdown>
-        {langRows.map(x => (
+        {langRows.map((x) => (
           <Menu.Item key={x.key} color={lang === x.key ? 'blue' : undefined} onClick={() => handleClick(x.key)}>
             {i18n.t(x.label)}
           </Menu.Item>

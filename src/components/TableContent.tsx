@@ -1,10 +1,11 @@
 import { Anchor, Checkbox } from '@mantine/core'
 import { IconPencilMinus, IconDots, IconTrash } from '@tabler/icons-react'
-import SelectLang from './SelectLang'
+import SelectLang from './PickerLang'
 
 interface Props extends WithClassName {
   data: any[]
   rows: string[]
+  cols?: any[]
 }
 
 const TableContentView = memo((props: Props) => {
@@ -30,8 +31,15 @@ const TableContentView = memo((props: Props) => {
 
   return (
     <div className={className}>
+      {/* {selection.length > 0 && (
+        <SelectionBox>
+          <div className="flex items-center space-x-2">
+            <div className="font-bold mr-4">{i18n.t('common.selected', { count: selection.length })}</div>
+            <Button size="xs">删除选中</Button>
+          </div>
+        </SelectionBox>
+      )} */}
       <Table.ScrollContainer minWidth={500}>
-        {/* horizontalSpacing="xl" */}
         <Table highlightOnHover verticalSpacing="xs">
           <Table.Thead className="relative">
             <Table.Tr style={{ background: defaultBg }}>
@@ -40,14 +48,6 @@ const TableContentView = memo((props: Props) => {
                 <Table.Th key={index}>{x}</Table.Th>
               ))}
             </Table.Tr>
-            {selection.length > 0 && (
-              <SelectionBox>
-                <div className="flex items-center space-x-2">
-                  <div className="font-bold mr-4">{i18n.t('page.selected', { count: selection.length })}</div>
-                  <Button size="xs">删除选中</Button>
-                </div>
-              </SelectionBox>
-            )}
           </Table.Thead>
           <Table.Tbody>
             {data.map((element, index) => (

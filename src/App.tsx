@@ -1,5 +1,6 @@
-import React from 'react'
 import { MantineProvider, createTheme } from '@mantine/core'
+import { ModalsProvider } from '@mantine/modals'
+import React from 'react'
 import AppRoute from './router'
 import '@mantine/core/styles.css'
 import './app.css'
@@ -13,7 +14,9 @@ function App() {
   return (
     <React.StrictMode>
       <MantineProvider theme={theme}>
-        <AppRoute />
+        <ModalsProvider>
+          <AppRoute />
+        </ModalsProvider>
       </MantineProvider>
     </React.StrictMode>
   )
